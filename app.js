@@ -31,7 +31,6 @@ async function fetchAndDisplayPrice(itemName) {
         const response = await fetch(route);
         const data = await response.json();
 
-        // Access API by string key
         const priceData = data.data[itemId.toString()];
         if (!priceData) throw new Error("No data returned");
 
@@ -49,9 +48,25 @@ async function fetchAndDisplayPrice(itemName) {
     }
 }
 
+function updateDiff() {
+    const barHigh = parseInt(itemDivMap.rune_bar.high_price.innerText) || 0;
+    const barLow  = parseInt(itemDivMap.rune_bar.low_price.innerText) || 0;
+    const oreHigh = parseInt(itemDivMap.rune_ore.high_price.innerText) || 0;
+    const oreLow  = parseInt(itemDivMap.rune_ore.low_price.innerText) || 0;
+
+    document.getElementById("priceDiffHigh").innerText = barHigh - oreHigh;
+    document.getElementById("priceDiffLow").innerText = barLow - oreLow;
+}
+
 button.addEventListener("click", async () => {
+    // Show loading in Diff row
+    document.getElementById("priceDiffHigh").innerText = "Loading...";
+    document.getElementById("priceDiffLow").innerText = "Loading...";
+
     const promises = Object.keys(itemDivMap).map(itemName =>
         fetchAndDisplayPrice(itemName)
     );
     await Promise.all(promises);
+
+    updateDiff();
 });

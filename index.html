@@ -13,6 +13,8 @@
       --gold-hover: #eab308;
       --text: #e5e7eb;
       --muted: #9ca3af;
+      --btn-bg: #1f1f2a;   /* darker button background */
+      --btn-hover: #2a2a3a; /* slightly lighter on hover */
     }
 
     * { box-sizing: border-box; }
@@ -25,14 +27,12 @@
       color: var(--text);
     }
 
-    /* Container max width for desktop */
     .container { 
       max-width: 800px; 
       margin: 0 auto; 
       width: 100%;
     }
 
-    /* TITLE BAR */
     .title-bar {
       display: flex;
       align-items: center;
@@ -50,18 +50,32 @@
       padding: 14px;
       font-size: 16px;
       font-weight: 600;
-      background-color: var(--gold);
-      color: #1a1a1a;
-      border: none;
+      background-color: var(--btn-bg);
+      color: var(--gold);
+      border: 2px solid var(--gold);   /* gold border */
       border-radius: 10px;
       cursor: pointer;
       transition: background-color 0.2s ease, transform 0.1s ease;
       margin-bottom: 14px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
     }
 
-    button:hover { background-color: var(--gold-hover); transform: translateY(-1px); }
+    button:hover {
+      background-color: var(--btn-hover);
+      transform: translateY(-1px);
+    }
 
-    /* TABLE CARD */
+    /* Icon inside button */
+    .btn-icon {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
+
     .table-card {
       background-color: var(--card);
       border: 1px solid var(--border);
@@ -76,18 +90,16 @@
       table-layout: fixed;
     }
 
-    thead { 
-      background-color: #0b1220; 
-    }
+    thead { background-color: #0b1220; }
 
     th {
-      text-align: center; /* center headers */
+      text-align: center;
       font-size: 12px;
       color: var(--muted);
       text-transform: uppercase;
       letter-spacing: 0.08em;
       padding: 12px 16px;
-      border: 1px solid var(--border); /* full border around headers */
+      border: 1px solid var(--border);
     }
 
     td {
@@ -95,22 +107,21 @@
       font-size: 15px;
       vertical-align: middle;
       text-align: center;
-      border: 1px solid var(--border); /* border around all cells */
+      border: 1px solid var(--border);
     }
 
-    /* Horizontal price layout */
     td.price-cell.horizontal {
       display: flex;
-      justify-content: center; /* Center the High/Low blocks as a group */
-      gap: 40px; /* Space between High and Low */
-      flex-wrap: wrap; /* Wrap on small screens */
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
       max-width: 100%;
     }
 
     td.price-cell.horizontal .price-block {
       display: flex;
       flex-direction: column;
-      align-items: center; /* Center label, price, time inside block */
+      align-items: center;
       min-width: 80px;
     }
 
@@ -132,11 +143,8 @@
       white-space: nowrap;
     }
 
-    tbody tr:hover { 
-      background-color: rgba(250, 204, 21, 0.04); 
-    }
+    tbody tr:hover { background-color: rgba(250, 204, 21, 0.04); }
 
-    /* Optional: responsive font scaling for desktop */
     @media(min-width: 600px) {
       h1 { font-size: 2rem; }
       td { font-size: 16px; }
@@ -147,16 +155,18 @@
 <body>
   <div class="container">
 
-    <!-- TITLE -->
     <div class="title-bar">
       <img src="./img/1024px-Runite_ore_detail.png" alt="Rune Ore" class="title-icon" />
-      <h1>Rune Dashboard</h1>
+      <h1>Rune Table</h1>
       <img src="./img/1024px-Runite_bar_detail.png" alt="Rune Bar" class="title-icon" />
     </div>
 
-    <button id="loadBtn">Load Prices</button>
+    <!-- Button with gold coin icon -->
+    <button id="loadBtn">
+      Load Prices
+      <img src="./img/Coins_detail.png" alt="Gold Coins" class="btn-icon" />
+    </button>
 
-    <!-- TABLE -->
     <div class="table-card">
       <table>
         <thead>
@@ -193,6 +203,20 @@
                 <span class="label">Low</span>
                 <span id="priceRuneOreLow" class="price">—</span>
                 <span id="timeRuneOreLow" class="time">—</span>
+              </div>
+            </td>
+          </tr>
+          <!-- Diff Row -->
+          <tr>
+            <td>Price Diffs</td>
+            <td class="price-cell horizontal">
+              <div class="price-block">
+                <span class="label">High</span>
+                <span id="priceDiffHigh" class="price">—</span>
+              </div>
+              <div class="price-block">
+                <span class="label">Low</span>
+                <span id="priceDiffLow" class="price">—</span>
               </div>
             </td>
           </tr>
