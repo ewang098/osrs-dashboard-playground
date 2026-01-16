@@ -59,14 +59,25 @@ function updateDiff() {
 }
 
 button.addEventListener("click", async () => {
-    // Show loading in Diff row
-    document.getElementById("priceDiffHigh").innerText = "Loading...";
-    document.getElementById("priceDiffLow").innerText = "Loading...";
+    // disable button upon click
+    button.disabled = true;
 
-    const promises = Object.keys(itemDivMap).map(itemName =>
-        fetchAndDisplayPrice(itemName)
-    );
-    await Promise.all(promises);
+    try {
+        // Show loading in Diff row
+        document.getElementById("priceDiffHigh").innerText = "Loading...";
+        document.getElementById("priceDiffLow").innerText = "Loading...";
 
-    updateDiff();
+        const promises = Object.keys(itemDivMap).map(itemName =>
+            fetchAndDisplayPrice(itemName)
+        );
+        await Promise.all(promises);
+
+        updateDiff();
+
+        // Delay BEFORE re-enabling
+        await new Promise(resolve => setTimeout(resolve, 1000));
+    } finally {
+        // Re-enable button when everything is done
+        button.disabled = false;
+    }
 });
