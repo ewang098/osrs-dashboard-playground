@@ -1,12 +1,12 @@
 # Dashboards
-## OSRS
+## OSRS ⚔️
 ### Rune Table
 API Used: [RuneScape Wiki GE Real-time Prices](https://oldschool.runescape.wiki/w/RuneScape:Real-time_Prices)
 
-# Local Dev
+# Local Dev 💻
 Currently uses [Live Server Extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 
-# Planned Work
+# Planned Work 👷
 ## Code Maintainability
 - add linting checks and update repo so PRs are required to merge
 - refactor deployable code to own folder and update repo deploy folder
