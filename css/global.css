@@ -1,5 +1,4 @@
 :root {
-    --bg: #0f172a;
     --card: #111827;
     --border: #1f2937;
     --gold: #facc15;
@@ -13,7 +12,7 @@
 * { box-sizing: border-box; }
 
 body {
-    background-color: var(--bg);
+    background-color: #353935;
     color: var(--text);
     margin: 0;
     padding: 20px;
