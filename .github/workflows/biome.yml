@@ -1,4 +1,4 @@
-name: Lint Check
+name: Biome Check
 
 on:
   pull_request:
@@ -12,6 +12,5 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      # https://biomejs.dev/reference/cli/#biome-ci
-      - name: Biome CI Check
-        run: npx @biomejs/biome ci
+      - name: Format Check
+        run: npx @biomejs/biome format

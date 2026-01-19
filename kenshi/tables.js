@@ -4,40 +4,70 @@
 
 const weaponReachData = [
   { Name: "Nodachi", Class: "Katana", Cut: 1.38, Blunt: 0, Reach: 25 },
-  { Name: "Topper", Class: "Katana", Cut: 1.27, Blunt: 0.10, Reach: 25 },
-  { Name: "Heavy_Polearm", Class: "Polearm", Cut: 0.81, Blunt: 0.40, Reach: 26 },
-  { Name: "Naginata_Katana", Class: "Polearm", Cut: 0.98, Blunt: 0.20, Reach: 26 },
-  { Name: "Naginata", Class: "Polearm", Cut: 0.92, Blunt: 0.20, Reach: 28 },
-  { Name: "Polearm", Class: "Polearm", Cut: 0.58, Blunt: 0.50, Reach: 28 },
-  { Name: "Falling_Sun", Class: "Heavy", Cut: 1.38, Blunt: 1.00, Reach: 25 },
-  { Name: "Plank", Class: "Heavy", Cut: 0.92, Blunt: 1.20, Reach: 30 },
-  { Name: "Fragment_Axe", Class: "Heavy", Cut: 0.35, Blunt: 1.80, Reach: 32 }
+  { Name: "Topper", Class: "Katana", Cut: 1.27, Blunt: 0.1, Reach: 25 },
+  { Name: "Heavy_Polearm", Class: "Polearm", Cut: 0.81, Blunt: 0.4, Reach: 26 },
+  { Name: "Naginata_Katana", Class: "Polearm", Cut: 0.98, Blunt: 0.2, Reach: 26 },
+  { Name: "Naginata", Class: "Polearm", Cut: 0.92, Blunt: 0.2, Reach: 28 },
+  { Name: "Polearm", Class: "Polearm", Cut: 0.58, Blunt: 0.5, Reach: 28 },
+  { Name: "Falling_Sun", Class: "Heavy", Cut: 1.38, Blunt: 1.0, Reach: 25 },
+  { Name: "Plank", Class: "Heavy", Cut: 0.92, Blunt: 1.2, Reach: 30 },
+  { Name: "Fragment_Axe", Class: "Heavy", Cut: 0.35, Blunt: 1.8, Reach: 32 },
 ];
 
 // TODO: would be better to merge dupes so we dont need to review cell by cell,
 // TODO: figure out images
 bodyPartHitChancesData = [
-  {Name: "Greenlander", Head: 80, Chest: 140, Stomach: 140, Right_Arm: 40, Left_Arm: 80, Legs: 80},
+  { Name: "Greenlander", Head: 80, Chest: 140, Stomach: 140, Right_Arm: 40, Left_Arm: 80, Legs: 80 },
   // shek + scorchlander are same
-  {Name: "Scorchlander", Head: 80, Chest: 140, Stomach: 140, Right_Arm: 60, Left_Arm: 80, Legs: 80},
-  {Name: "Shek", Head: 80, Chest: 140, Stomach: 140, Right_Arm: 60, Left_Arm: 80, Legs: 80},
-  {Name: "Skeleton", Head: 80, Chest: 140, Stomach: 80, Right_Arm: 60, Left_Arm: 80, Legs: 80},
-  {Name: "Hive_Worker", Head: 80, Chest: 140, Stomach: 60, Right_Arm: 40, Left_Arm: 80, Legs: 80},
-  {Name: "Hive_Prince", Head: 80, Chest: 140, Stomach: 60, Right_Arm: 40, Left_Arm: 80, Legs: 80},
-  {Name: "Hive_Soldier", Head: 80, Chest: 140, Stomach: 60, Right_Arm: 40, Left_Arm: 80, Legs: 80},
+  { Name: "Scorchlander", Head: 80, Chest: 140, Stomach: 140, Right_Arm: 60, Left_Arm: 80, Legs: 80 },
+  { Name: "Shek", Head: 80, Chest: 140, Stomach: 140, Right_Arm: 60, Left_Arm: 80, Legs: 80 },
+  { Name: "Skeleton", Head: 80, Chest: 140, Stomach: 80, Right_Arm: 60, Left_Arm: 80, Legs: 80 },
+  { Name: "Hive_Worker", Head: 80, Chest: 140, Stomach: 60, Right_Arm: 40, Left_Arm: 80, Legs: 80 },
+  { Name: "Hive_Prince", Head: 80, Chest: 140, Stomach: 60, Right_Arm: 40, Left_Arm: 80, Legs: 80 },
+  { Name: "Hive_Soldier", Head: 80, Chest: 140, Stomach: 60, Right_Arm: 40, Left_Arm: 80, Legs: 80 },
 ];
 
 // specialist for all armours
 const medBodyArmourData = [
-  { Name: "White_Plate_Jacket", Blunt_Res: "28%", Cut_Res: "49%", Cut_Res_Eff: "70%", Coverage: "100% Chest, Stomach, Arms"},
-  { Name: "Mercenary_Leather_Armour", Blunt_Res: "32%", Cut_Res: "49%", Cut_Res_Eff: "70%", Coverage: "100% Chest, 70% Stomach, 80% Arms"},
+  {
+    Name: "White_Plate_Jacket",
+    Blunt_Res: "28%",
+    Cut_Res: "49%",
+    Cut_Res_Eff: "70%",
+    Coverage: "100% Chest, Stomach, Arms",
+  },
+  {
+    Name: "Mercenary_Leather_Armour",
+    Blunt_Res: "32%",
+    Cut_Res: "49%",
+    Cut_Res_Eff: "70%",
+    Coverage: "100% Chest, 70% Stomach, 80% Arms",
+  },
 ];
 
 const heavyBodyArmourData = [
-  { Name: "Mercenary_Plate", Blunt_Res: "48%", Cut_Res: "62%", Cut_Res_Eff: "80%", Coverage: "100% Chest, 70% Stomach, 90% Arms"},
-  { Name: "Samurai_Armour", Blunt_Res: "52%", Cut_Res: "70%", Cut_Res_Eff: "90%", Coverage: "100% Chest, 85% Stomach, 85% Arms"},
-  { Name: "Crab_Armour", Blunt_Res: "56%", Cut_Res: "78%", Cut_Res_Eff: "90%", Coverage: "100% Chest, Stomach, 90% Arms"},
-  { Name: "Unholy_Chestplate", Blunt_Res: "44.8%", Cut_Res: "70%", Cut_Res_Eff: "95%", Coverage: "100% Chest, Stomach, 25% Arms, 40% Legs"},
+  {
+    Name: "Mercenary_Plate",
+    Blunt_Res: "48%",
+    Cut_Res: "62%",
+    Cut_Res_Eff: "80%",
+    Coverage: "100% Chest, 70% Stomach, 90% Arms",
+  },
+  {
+    Name: "Samurai_Armour",
+    Blunt_Res: "52%",
+    Cut_Res: "70%",
+    Cut_Res_Eff: "90%",
+    Coverage: "100% Chest, 85% Stomach, 85% Arms",
+  },
+  { Name: "Crab_Armour", Blunt_Res: "56%", Cut_Res: "78%", Cut_Res_Eff: "90%", Coverage: "100% Chest, Stomach, 90% Arms" },
+  {
+    Name: "Unholy_Chestplate",
+    Blunt_Res: "44.8%",
+    Cut_Res: "70%",
+    Cut_Res_Eff: "95%",
+    Coverage: "100% Chest, Stomach, 25% Arms, 40% Legs",
+  },
 ];
 
 // =====================
@@ -53,7 +83,7 @@ function createSortableTable({ tableId, data, headers }) {
 
   // --- Setup headers ---
   const headerRow = document.createElement("tr");
-  headers.forEach(key => {
+  headers.forEach((key) => {
     const th = document.createElement("th");
     th.dataset.column = key;
     th.style.cursor = "pointer";
@@ -79,7 +109,7 @@ function createSortableTable({ tableId, data, headers }) {
 
   // --- Sort indicators ---
   function updateSortIndicators() {
-    thead.querySelectorAll("th").forEach(th => {
+    thead.querySelectorAll("th").forEach((th) => {
       const key = th.dataset.column;
       if (key === sortKey) {
         th.textContent = key + (sortAsc ? " ▲" : " ▼");
@@ -93,10 +123,10 @@ function createSortableTable({ tableId, data, headers }) {
   function renderTable() {
     tbody.innerHTML = "";
 
-    data.forEach(row => {
+    data.forEach((row) => {
       const tr = document.createElement("tr");
 
-      headers.forEach(key => {
+      headers.forEach((key) => {
         const td = document.createElement("td");
 
         if (key === "Name") {
@@ -106,7 +136,7 @@ function createSortableTable({ tableId, data, headers }) {
           const text = document.createElement("div");
           text.textContent = row.Name;
           wrapper.appendChild(text);
-          
+
           // if additional tables do not have image we will have list of tables
           if (tableId !== "bodyPartHitChancesTable") {
             const img = document.createElement("img");
@@ -114,7 +144,7 @@ function createSortableTable({ tableId, data, headers }) {
             img.alt = row.Name;
             wrapper.appendChild(img);
           }
-          
+
           td.appendChild(wrapper);
         } else {
           td.textContent = row[key];
