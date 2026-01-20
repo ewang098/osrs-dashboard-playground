@@ -12,6 +12,7 @@ Uses [Biome](https://github.com/biomejs/biome) for linting and formatting
 ## Code Maintainability
 - refactor deployable code to own folder and update repo deploy folder
 - add unit tests
+- add code coverage (javascript code only)
 
 ## New Pages
 - add battle brothers page (quick ref on accuracy bonuses - i.e. spear, sword, polearm + early enemy stats table?)
