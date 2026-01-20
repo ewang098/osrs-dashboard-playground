@@ -10,7 +10,6 @@ Uses [Biome](https://github.com/biomejs/biome) for linting and formatting
 
 # Planned Work 👷
 ## Code Maintainability
-- refactor deployable code to own folder and update repo deploy folder
 - add unit tests
 - add code coverage (javascript code only)
 
