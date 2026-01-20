@@ -16,4 +16,4 @@ jobs:
         run: npx @biomejs/biome format
 
       - name: Lint Check
-        run: npx @biomjs/biome lint
+        run: npx @biomejs/biome lint
