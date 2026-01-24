@@ -9,6 +9,8 @@ Currently uses [Live Server Extension](https://marketplace.visualstudio.com/item
 Uses [Biome](https://github.com/biomejs/biome) for linting and formatting
 
 # Planned Work 👷
+## UI
+- freeze top so that links are always accessible while scrolling
 ## Code Maintainability
 - add unit tests
 - add code coverage (javascript code only)
