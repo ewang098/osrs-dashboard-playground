@@ -2,6 +2,9 @@
 // DATA
 // =====================
 
+// TODO: split out to multiple pages
+// add functionality where we can put not have data and it will be replaced with default 0 or ""
+// merge dupes row or column - 1st iteration entire column or row
 const weaponReachData = [
   { Name: "Nodachi", Class: "Katana", Cut: 1.38, Blunt: 0, Reach: 25 },
   { Name: "Topper", Class: "Katana", Cut: 1.27, Blunt: 0.1, Reach: 25 },
@@ -28,7 +31,25 @@ const turretDamageData = [
   {Name: "Harpoon_II", Pierce_Dmg: 90, Max_Reload: "4s", Min_Reload: "2s", Range: "120m"},
   {Name: "Double-Barrel_Harpoon", Pierce_Dmg: 80, Max_Reload: "6s", Min_Reload: "2s", Range: "75m"},
   {Name: "Multi-Barrel_Harpoon", Pierce_Dmg: 50, Max_Reload: "12s", Min_Reload: "2.5s", Range: "65m"},
-]
+];
+
+// add pictures
+const buildingConstructionData = [
+  {Name: "Storm_House", Building_Mats: 16, Iron_Plates: 0, Copper_Alloy_Plates: 0},
+  {Name: "Longhouse", Building_Mats: 24, Iron_Plates: 0, Copper_Alloy_Plates: 0},
+  {Name: "Stationhouse", Building_Mats: 40, Iron_Plates: 0, Copper_Alloy_Plates: 0},
+  {Name: "Watchtower", Building_Mats: 60, Iron_Plates: 10, Copper_Alloy_Plates: 0},
+  {Name: "Outpost_s-III", Building_Mats: 20, Iron_Plates: 0, Copper_Alloy_Plates: 20},
+  {Name: "Outpost_s-IV", Building_Mats: 30, Iron_Plates: 0, Copper_Alloy_Plates: 30},
+];
+
+// TODO: add pictures
+const defensiveGateTableData = [
+  {Name: "Makeshift", Building_Mats: 5, Door_Condition: 15},
+  {Name: "Defensive_II", Building_Mats: 10, Door_Condition: 30},
+  {Name: "Defensive_III", Building_Mats: 15, Door_Condition: 60},
+  {Name: "Defensive_IV", Building_Mats: 20, Door_Condition: 90},
+];
 
 // TODO: would be better to merge dupes so we dont need to review cell by cell,
 // TODO: figure out images
@@ -200,10 +221,22 @@ createSortableTable({
 });
 
 createSortableTable({
+  tableId: "buildingConstructionTable",
+  data: buildingConstructionData,
+  headers: Object.keys(buildingConstructionData[0]),
+});
+
+createSortableTable({
+  tableId: "defensiveGateTable",
+  data: defensiveGateTableData,
+  headers: Object.keys(defensiveGateTableData[0]),
+});
+
+createSortableTable({
   tableId: "turretDamageTable",
   data: turretDamageData,
   headers: Object.keys(turretDamageData[0]),
-})
+});
 
 createSortableTable({
   tableId: "bodyPartHitChancesTable",
@@ -222,16 +255,3 @@ createSortableTable({
   data: heavyBodyArmourData,
   headers: Object.keys(heavyBodyArmourData[0]),
 });
-
-// TODO:
-// createSortableTable({
-//   tableId: "legwearTable",
-//   data: ,
-//   headers: ["Name", "Size", "Danger"]
-// });
-
-// createSortableTable({
-//   tableId: "shirtsTable",
-//   data: ,
-//   headers: ["Name", "Size", "Danger"]
-// });
