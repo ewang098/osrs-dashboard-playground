@@ -14,6 +14,9 @@
       font-family: sans-serif;
       color: #a7937b;
       padding: 10px;
+
+      /* Add margin/padding to the main content to prevent overlap */
+      margin-top: 60px; /* Adjust this value to be equal to or greater than the header's height */
     }
 
     table {
@@ -49,8 +52,24 @@
       display: block;
       margin: 4px auto 0;
     }
+
+    .fixed-headers {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%; /* Spans the full width of the viewport */
+      background-color: #333; /* Add a background color so content doesn't show through */
+      color: white;
+      padding: 10px;
+      z-index: 10; /* Ensures the header is on top of other content */
+    }
   </style>
 </head>
+<div class="fixed-headers">
+    <a href="../../index.html">← Home</a>
+    <a> | </a>
+    <a href="../index.html">Kenshi Home</a>
+</div>
 <body>
     <h1>Base Dashboard</h1>
     
@@ -83,9 +102,6 @@
     <thead></thead>
     <tbody></tbody>
     </table>
-
-    <a href="../index.html">←Kenshi Home</a>
-    <a href="../../index.html">← Home</a>
 
     <script src="baseTables.js"></script>
 </body>
