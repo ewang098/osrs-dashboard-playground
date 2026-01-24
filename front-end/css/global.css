@@ -19,6 +19,9 @@ body {
   margin: 0;
   padding: 20px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Add margin/padding to the main content to prevent overlap */
+  margin-top: 2em; /* Adjust this value to be equal to or greater than the header's height */
 }
 
 a {
@@ -114,6 +117,17 @@ td {
   vertical-align: middle;
   text-align: center;
   border: 1px solid var(--border);
+}
+
+.fixed-headers {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Spans the full width of the viewport */
+  background-color: #333; /* Add a background color so content doesn't show through */
+  color: white;
+  padding: 10px;
+  z-index: 10; /* Ensures the header is on top of other content */
 }
 
 @media (min-width: 600px) {
