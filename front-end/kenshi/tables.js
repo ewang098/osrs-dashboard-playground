@@ -14,6 +14,14 @@ const weaponReachData = [
   { Name: "Fragment_Axe", Class: "Heavy", Cut: 0.35, Blunt: 1.8, Reach: 32 },
 ];
 
+const turretData = [
+  {Name: "Mounted_XBOW", Stage: 1, Iron_Plates: 6, Copper:0, Steel_Bars: 0, Copper_Alloy_Plates: 0, Electrical_Components: 0},
+  {Name: "Mounted_XBOW_II", Stage: 2, Iron_Plates: 8, Copper: 0, Steel_Bars: 0, Copper_Alloy_Plates: 0, Electrical_Components: 0},
+  {Name: "Harpoon", Stage: 3, Iron_Plates: 7, Copper: 3, Steel_Bars: 3, Copper_Alloy_Plates: 0, Electrical_Components: 0},
+  {Name: "Harpoon_II", Stage: 4, Iron_Plates: 10, Copper: 4, Steel_Bars: 3, Copper_Alloy_Plates: 0, Electrical_Components: 0},
+  {Name: "Double-Barrel_Harpoon", Stage: 5, Iron_Plates: 0, Copper: 0, Steel_Bars:6, Copper_Alloy_Plates: 6, Electrical_Components: 6},
+];
+
 // TODO: would be better to merge dupes so we dont need to review cell by cell,
 // TODO: figure out images
 bodyPartHitChancesData = [
@@ -175,6 +183,12 @@ createSortableTable({
   tableId: "weaponTable",
   data: weaponReachData,
   headers: Object.keys(weaponReachData[0]),
+});
+
+createSortableTable({
+  tableId: "turretTable",
+  data: turretData,
+  headers: Object.keys(turretData[0]),
 });
 
 createSortableTable({
