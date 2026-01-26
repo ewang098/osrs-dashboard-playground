@@ -73,9 +73,7 @@ const heavyBodyArmourData = [
   },
 ];
 
-const tablesWithNoImages = [
-    "bodyPartHitChancesTable",
-];
+const tablesWithNoImages = ["bodyPartHitChancesTable"];
 
 // =====================
 // GENERIC SORTABLE TABLE FUNCTION
@@ -144,7 +142,7 @@ function createSortableTable({ tableId, data, headers, sortName }) {
           text.textContent = row.Name;
           wrapper.appendChild(text);
 
-          if (!(tablesWithNoImages.includes(tableId))) {
+          if (!tablesWithNoImages.includes(tableId)) {
             const img = document.createElement("img");
             img.src = `img/${tableId}/${row.Name}.jpg`;
             img.alt = row.Name;
@@ -181,26 +179,26 @@ createSortableTable({
   tableId: "weaponTable",
   data: weaponReachData,
   headers: Object.keys(weaponReachData[0]),
-  sortName: 'Reach',
+  sortName: "Reach",
 });
 
 createSortableTable({
   tableId: "bodyPartHitChancesTable",
   data: bodyPartHitChancesData,
   headers: Object.keys(bodyPartHitChancesData[0]),
-  sortName: 'Stomach',
+  sortName: "Stomach",
 });
 
 createSortableTable({
   tableId: "medBodyArmourTable",
   data: medBodyArmourData,
   headers: Object.keys(medBodyArmourData[0]),
-  sortName: 'Cut_Res_Eff',
+  sortName: "Cut_Res_Eff",
 });
 
 createSortableTable({
   tableId: "heavyBodyArmourTable",
   data: heavyBodyArmourData,
   headers: Object.keys(heavyBodyArmourData[0]),
-  sortName: 'Cut_Res_Eff',
+  sortName: "Cut_Res_Eff",
 });

@@ -3,49 +3,79 @@
 // =====================
 
 const turretConstructionData = [
-  {Name: "Mounted_XBOW", Stage: 1, Iron_Plates: 6, Copper:0, Steel_Bars: 0, Copper_Alloy_Plates: 0, Electrical_Components: 0},
-  {Name: "Mounted_XBOW_II", Stage: 2, Iron_Plates: 8, Copper: 0, Steel_Bars: 0, Copper_Alloy_Plates: 0, Electrical_Components: 0},
-  {Name: "Harpoon", Stage: 3, Iron_Plates: 7, Copper: 3, Steel_Bars: 3, Copper_Alloy_Plates: 0, Electrical_Components: 0},
-  {Name: "Harpoon_II", Stage: 4, Iron_Plates: 10, Copper: 4, Steel_Bars: 3, Copper_Alloy_Plates: 0, Electrical_Components: 0},
-  {Name: "Double-Barrel_Harpoon", Stage: 5, Iron_Plates: 0, Copper: 0, Steel_Bars:6, Copper_Alloy_Plates: 6, Electrical_Components: 6},
+  {
+    Name: "Mounted_XBOW",
+    Stage: 1,
+    Iron_Plates: 6,
+    Copper: 0,
+    Steel_Bars: 0,
+    Copper_Alloy_Plates: 0,
+    Electrical_Components: 0,
+  },
+  {
+    Name: "Mounted_XBOW_II",
+    Stage: 2,
+    Iron_Plates: 8,
+    Copper: 0,
+    Steel_Bars: 0,
+    Copper_Alloy_Plates: 0,
+    Electrical_Components: 0,
+  },
+  { Name: "Harpoon", Stage: 3, Iron_Plates: 7, Copper: 3, Steel_Bars: 3, Copper_Alloy_Plates: 0, Electrical_Components: 0 },
+  {
+    Name: "Harpoon_II",
+    Stage: 4,
+    Iron_Plates: 10,
+    Copper: 4,
+    Steel_Bars: 3,
+    Copper_Alloy_Plates: 0,
+    Electrical_Components: 0,
+  },
+  {
+    Name: "Double-Barrel_Harpoon",
+    Stage: 5,
+    Iron_Plates: 0,
+    Copper: 0,
+    Steel_Bars: 6,
+    Copper_Alloy_Plates: 6,
+    Electrical_Components: 6,
+  },
 ];
 
 const turretDamageData = [
-  {Name: "Mounted_XBOW_II", Pierce_Dmg: 75, Max_Reload: "6s", Min_Reload: "1.5s", Range: "100m"},
-  {Name: "Harpoon",  Pierce_Dmg: 75, Max_Reload: "4s", Min_Reload: "2s", Range: "120m"},
-  {Name: "Harpoon_II", Pierce_Dmg: 90, Max_Reload: "4s", Min_Reload: "2s", Range: "120m"},
-  {Name: "Double-Barrel_Harpoon", Pierce_Dmg: 80, Max_Reload: "6s", Min_Reload: "2s", Range: "75m"},
-  {Name: "Multi-Barrel_Harpoon", Pierce_Dmg: 50, Max_Reload: "12s", Min_Reload: "2.5s", Range: "65m"},
+  { Name: "Mounted_XBOW_II", Pierce_Dmg: 75, Max_Reload: "6s", Min_Reload: "1.5s", Range: "100m" },
+  { Name: "Harpoon", Pierce_Dmg: 75, Max_Reload: "4s", Min_Reload: "2s", Range: "120m" },
+  { Name: "Harpoon_II", Pierce_Dmg: 90, Max_Reload: "4s", Min_Reload: "2s", Range: "120m" },
+  { Name: "Double-Barrel_Harpoon", Pierce_Dmg: 80, Max_Reload: "6s", Min_Reload: "2s", Range: "75m" },
+  { Name: "Multi-Barrel_Harpoon", Pierce_Dmg: 50, Max_Reload: "12s", Min_Reload: "2.5s", Range: "65m" },
 ];
 
 // add pictures
 const buildingConstructionData = [
-  {Name: "Storm_House", Building_Mats: 16, Iron_Plates: 0, Copper_Alloy_Plates: 0},
-  {Name: "Longhouse", Building_Mats: 24, Iron_Plates: 0, Copper_Alloy_Plates: 0},
-  {Name: "Stationhouse", Building_Mats: 40, Iron_Plates: 0, Copper_Alloy_Plates: 0},
-  {Name: "Watchtower", Building_Mats: 60, Iron_Plates: 10, Copper_Alloy_Plates: 0},
-  {Name: "Outpost_s-III", Building_Mats: 20, Iron_Plates: 0, Copper_Alloy_Plates: 20},
-  {Name: "Outpost_s-IV", Building_Mats: 30, Iron_Plates: 0, Copper_Alloy_Plates: 30},
+  { Name: "Storm_House", Building_Mats: 16, Iron_Plates: 0, Copper_Alloy_Plates: 0 },
+  { Name: "Longhouse", Building_Mats: 24, Iron_Plates: 0, Copper_Alloy_Plates: 0 },
+  { Name: "Stationhouse", Building_Mats: 40, Iron_Plates: 0, Copper_Alloy_Plates: 0 },
+  { Name: "Watchtower", Building_Mats: 60, Iron_Plates: 10, Copper_Alloy_Plates: 0 },
+  { Name: "Outpost_s-III", Building_Mats: 20, Iron_Plates: 0, Copper_Alloy_Plates: 20 },
+  { Name: "Outpost_s-IV", Building_Mats: 30, Iron_Plates: 0, Copper_Alloy_Plates: 30 },
 ];
 
 // TODO: add pictures
 const defensiveGateData = [
-  {Name: "Makeshift", Building_Mats: 5, Door_Condition: 15},
-  {Name: "Defensive_II", Building_Mats: 10, Door_Condition: 30},
-  {Name: "Defensive_III", Building_Mats: 15, Door_Condition: 60},
-  {Name: "Defensive_IV", Building_Mats: 20, Door_Condition: 90},
+  { Name: "Makeshift", Building_Mats: 5, Door_Condition: 15 },
+  { Name: "Defensive_II", Building_Mats: 10, Door_Condition: 30 },
+  { Name: "Defensive_III", Building_Mats: 15, Door_Condition: 60 },
+  { Name: "Defensive_IV", Building_Mats: 20, Door_Condition: 90 },
 ];
 
 // TODO: add pictures
 const windEnergyData = [
-  {Name: "Small_Generator", Energy_Output: 25, Iron_Plates: 7, Copper: 0, Electrical_Components: 4},
-  {Name: "Generator", Energy_Output: 50, Iron_Plates: 8, Copper: 5, Electrical_Components: 0},
-  {Name: "Generator_II", Energy_Output: 100, Iron_Plates: 8, Copper: 0, Electrical_Components: 8},
+  { Name: "Small_Generator", Energy_Output: 25, Iron_Plates: 7, Copper: 0, Electrical_Components: 4 },
+  { Name: "Generator", Energy_Output: 50, Iron_Plates: 8, Copper: 5, Electrical_Components: 0 },
+  { Name: "Generator_II", Energy_Output: 100, Iron_Plates: 8, Copper: 0, Electrical_Components: 8 },
 ];
 
-const tablesWithNoImages = [
-    "turretConstructionTable", "windEnergyTable", "turretDamageTable"
-];
+const tablesWithNoImages = ["turretConstructionTable", "windEnergyTable", "turretDamageTable"];
 
 // =====================
 // GENERIC SORTABLE TABLE FUNCTION
@@ -114,7 +144,7 @@ function createSortableTable({ tableId, data, headers, sortName }) {
           text.textContent = row.Name;
           wrapper.appendChild(text);
 
-          if (!(tablesWithNoImages.includes(tableId))) {
+          if (!tablesWithNoImages.includes(tableId)) {
             console.log(tableId);
             const img = document.createElement("img");
             img.src = "../" + `img/${tableId}/${row.Name}.jpg`;
@@ -149,34 +179,33 @@ createSortableTable({
   tableId: "turretConstructionTable",
   data: turretConstructionData,
   headers: Object.keys(turretConstructionData[0]),
-  sortName: 'Stage',
+  sortName: "Stage",
 });
 
 createSortableTable({
   tableId: "buildingConstructionTable",
   data: buildingConstructionData,
   headers: Object.keys(buildingConstructionData[0]),
-  sortName: 'Building_Mats',
+  sortName: "Building_Mats",
 });
 
 createSortableTable({
   tableId: "defensiveGateTable",
   data: defensiveGateData,
   headers: Object.keys(defensiveGateData[0]),
-  sortName: 'Door_Condition',
+  sortName: "Door_Condition",
 });
 
 createSortableTable({
   tableId: "windEnergyTable",
   data: windEnergyData,
   headers: Object.keys(windEnergyData[0]),
-  sortName: 'Energy_Output',
+  sortName: "Energy_Output",
 });
-
 
 createSortableTable({
   tableId: "turretDamageTable",
   data: turretDamageData,
   headers: Object.keys(turretDamageData[0]),
-  sortName: 'Pierce_Dmg',
+  sortName: "Pierce_Dmg",
 });
